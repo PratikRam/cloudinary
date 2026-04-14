@@ -4,18 +4,18 @@ import axios from 'axios';
 const API = axios.create({ baseURL: 'http://localhost:5000/api' });
 
 // Upload image API call
-export const uploadImage = (formData) => {
-  return API.post('/images/upload', formData, {
+export const uploadFile = (formData) => {
+  return API.post('/files/upload', formData, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
   });
 };
 
-export const  fetchImages = () => {
-  return API.get('/images');
+export const fetchFiles = () => {
+  return API.get('/files');
 };
 
-export const deleteImage = (id) => {
-  return API.delete(`/images/${id}`);
+export const deleteFile = (id) => {
+  return API.delete(`/files/${id}`);
 };

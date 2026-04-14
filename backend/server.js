@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 
 // API Routes
-app.use('/api/images', require('./src/routes/imageRoutes'));
+app.use('/api/files', require('./src/routes/fileRoutes'));
 
 // Basic Route for testing
 app.get('/', (req, res) => {
