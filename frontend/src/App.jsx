@@ -3,7 +3,7 @@ import { CloudUpload, Loader2 } from 'lucide-react'
 import { uploadFile } from './api'
 import FileGrid from './components/ImageGrid'
 
-function App() {
+function App () {
   const [file, setFile] = useState(null)
   const [refreshGrid, setRefreshGrid] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -80,8 +80,9 @@ function App() {
         {/* Status Message */}
         {message && (
           <p
-            className={`text-sm mt-2 font-medium ${message.includes('❌') ? 'text-red-500' : 'text-green-600'
-              }`}
+            className={`text-sm mt-2 font-medium ${
+              message.includes('❌') ? 'text-red-500' : 'text-green-600'
+            }`}
           >
             {message}
           </p>
